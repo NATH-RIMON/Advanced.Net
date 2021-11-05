@@ -1,0 +1,136 @@
+﻿@model Project.Models.Entities.User
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">UBold</a></li>
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">Users</a></li>
+
+                </ol>
+            </div>
+            <h4 class="page-title">Edit </h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+
+<form action="/User/Edit" method="post">
+
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(model => model.Id)
+    <div class="row">
+        <!-- end col -->
+
+        <div class="col-lg-6">
+
+            @if (ViewBag.ErrorMessage != null)
+            {
+                <div class="alert alert-danger alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>Error!</strong> @ViewBag.ErrorMessage
+                </div>
+            }
+            @if (ViewBag.SuccessMessage != null)
+            {
+                <div class="alert alert-success alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>Success!</strong> @ViewBag.SuccessMessage
+                </div>
+            }
+
+            <!-- end col-->
+
+            <div class="card-box">
+
+
+
+
+                <div class="form-group mb-3">
+                    <label for="product-meta-keywords">Name</label>
+                    <input type="text" class="form-control" value="@Model.Name.Trim()" name="Name" id="Name" placeholder="">
+                    @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                </div>
+
+
+                <div class="form-group mb-3">
+                    <label for="product-meta-keywords">Email</label>
+                    <input type="text" class="form-control" value="@Model.Email.Trim()" name="Email" id="Email" placeholder="">
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                </div>
+
+
+
+
+                <div class="form-group mb-3">
+                    <label for="product-meta-keywords">Password</label>
+                    <input type="text" class="form-control" value="@Model.Password.Trim()" name="Password" id="Password" placeholder="">
+                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                </div>
+
+
+                <div class="form-group mb-3">
+                    <label for="product-meta-keywords">Balance</label>
+                    <input type="text" class="form-control" value="@Model.Balance.Trim()" name="Balance" id="Balance" placeholder="">
+                    @Html.ValidationMessageFor(m => m.Balance, "", new { @class = "text-danger" })
+                </div>
+
+
+                <div class="form-group mb-3">
+                    <label for="product-meta-keywords">RegTime</label>
+                    <input type="text" class="form-control" value="@Model.RegTime.Trim()" name="RegTime" id="RegTime" placeholder="">
+                    @Html.ValidationMessageFor(m => m.RegTime, "", new { @class = "text-danger" })
+                </div>
+
+
+                <div class="form-group mb-3">
+                    <label for="product-meta-title">Role</label>
+                    <select Name="Role" class="custom-select " required>
+                        <option value="2">User</option>
+                        <option value="1">Admin</option>
+
+
+
+
+
+                    </select>
+                    @Html.ValidationMessageFor(m => m.Role, "", new { @class = "text-danger" })
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="text-center mb-3">
+                    <a href="/User/Index" type="button" class="btn w-sm btn-light waves-effect">Cancel</a>
+                    <button type="submit" class="btn w-sm btn-success waves-effect waves-light">Save</button>
+
+                </div>
+
+
+            </div> <!-- end card-box -->
+
+
+
+        </div> <!-- end col-->
+    </div>
+    <!-- end row -->
+    <!-- end row -->
+
+</form>

@@ -1,0 +1,130 @@
+﻿@model Project.Models.VM.SenderModel
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">UBold</a></li>
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">eCommerce</a></li>
+                    <li class="breadcrumb-item active">Sender</li>
+                </ol>
+            </div>
+            <h4 class="page-title">Sender </h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+
+<form action="/Sender/Index" method="post">
+
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <!-- end col -->
+
+        <div class="col-lg-6">
+
+            @if (ViewBag.ErrorMessage != null)
+            {
+                <div class="alert alert-danger alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>Error!</strong> @ViewBag.ErrorMessage
+                </div>
+            }
+            @if (ViewBag.SuccessMessage != null)
+            {
+                <div class="alert alert-success alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>Success!</strong> @ViewBag.SuccessMessage
+                </div>
+            }
+
+            <!-- end col-->
+
+            <div class="card-box">
+               
+
+                <div class="form-group mb-3">
+                    <label for="product-meta-title">Sender Numbers</label>
+                    <select Name="SenderNumberId" class="custom-select " required>
+                        <option value="">Open this select menu</option>
+
+
+
+                        @foreach (var s in Model.SenderNumbers)
+                        {
+                            <option value="@s.Id">@s.Number</option>
+
+                        }
+
+
+                    </select>
+                    @Html.ValidationMessageFor(m => m.SenderNumberId, "", new { @class = "text-danger" })
+                </div>
+
+
+                <div class="form-group mb-3">
+                    <label for="product-meta-title">Templates</label>
+                    <select Name="TemplateId" class="custom-select " onchange="fetchTemplate(this.value)" required>
+                        <option value="0">None</option>
+
+
+
+                        @foreach (var s in Model.Templates)
+                        {
+                            <option value="@s.Id">@s.Name</option>
+
+                        }
+
+
+                    </select>
+                    @Html.ValidationMessageFor(m => m.Templates, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="product-meta-keywords">Mobile Numbers</label>
+                    <input type="text" class="form-control" name="Numbers" id="Numbers" placeholder="+8801XXXXXXXXX,+8801XXXXXXXXX">
+                    @Html.ValidationMessageFor(m => m.Numbers, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="messageInput">Message</label>
+                    <textarea name="message" data-counter="#smsCounter" class="form-control" rows="5" id="messageInput" placeholder="Please enter description"></textarea>
+                    @Html.ValidationMessageFor(m => m.Message, "", new { @class = "text-danger" })
+                </div>
+                <ul id="smsCounter" hidden="hidden">
+                    <li>Encoding: <span class="encoding"></span></li>
+                    <li>Length: <span class="length"></span></li>
+                    <li>Messages: <span class="messages"></span></li>
+                    <li>Per Message: <span class="per_message"></span></li>
+                    <li>Remaining: <span class="remaining"></span></li>
+                </ul>
+            </div> <!-- end card-box -->
+
+            <div class="text-center mb-3">
+                <button type="button" class="btn w-sm btn-light waves-effect">Cancel</button>
+                <button type="submit" class="btn w-sm btn-success waves-effect waves-light">Send</button>
+                <button type="button" class="btn w-sm btn-danger waves-effect waves-light">Delete</button>
+            </div>
+
+        </div> <!-- end col-->
+    </div>
+    <!-- end row -->
+    <!-- end row -->
+
+</form>
+
+@section Scripts {
+    @Scripts.Render("~/asset/sms-counter")
+}
+
+
+
+
+

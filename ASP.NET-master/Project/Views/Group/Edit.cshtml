@@ -1,0 +1,92 @@
+﻿@model Project.Models.Entities.Group
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">UBold</a></li>
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">Group</a></li>
+
+                </ol>
+            </div>
+            <h4 class="page-title">Edit </h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+
+<form action="/Group/Edit" method="post">
+
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <!-- end col -->
+
+        <div class="col-lg-6">
+
+            @if (ViewBag.ErrorMessage != null)
+            {
+                <div class="alert alert-danger alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>Error!</strong> @ViewBag.ErrorMessage
+                </div>
+            }
+            @if (ViewBag.SuccessMessage != null)
+            {
+                <div class="alert alert-success alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>Success!</strong> @ViewBag.SuccessMessage
+                </div>
+            }
+
+            <!-- end col-->
+
+        <div class="card-box">
+
+
+
+
+
+
+
+
+
+            <div class="form-group mb-3" style="display:none">
+                <label for="product-meta-keywords">User ID</label>
+                <input type="text" class="form-control" value="@Model.UserId" name="UserId" id="UserId" placeholder="">
+                @Html.ValidationMessageFor(m => m.UserId, "", new { @class = "text-danger" })
+            </div>
+
+
+            <div class="form-group mb-3">
+                <label for="product-meta-keywords">Name</label>
+                <input type="text" class="form-control" value="@Model.Name.Trim()" name="Name" id="Name" placeholder="">
+                @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+            </div>
+
+            @Html.HiddenFor(model => model.Id)
+
+
+            <div class="text-center mb-3">
+                <a href="/Group/Index" type="button" class="btn w-sm btn-light waves-effect">Cancel</a>
+                <button type="submit" class="btn w-sm btn-success waves-effect waves-light">Save</button>
+                <button type="button" class="btn w-sm btn-danger waves-effect waves-light">Delete</button>
+            </div>
+
+
+        </div> <!-- end card-box -->
+
+
+
+        </div> <!-- end col-->
+    </div>
+    <!-- end row -->
+    <!-- end row -->
+
+</form>

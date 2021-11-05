@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Project.Models.Entities.Group>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">UBold</a></li>
+
+                    <li class="breadcrumb-item active">Group</li>
+                </ol>
+            </div>
+            <h4 class="page-title">@ViewBag.Title</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+
+                <div class="table-responsive">
+                    <table class="table table-centered table-striped dt-responsive nowrap w-100" id="products-datatable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                
+
+
+
+                                <th style="width: 75px;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+
+                                    <td class="table-user">
+
+                                        @item.Id
+                                    </td>
+                                    <td>@item.Name</td>
+                                    
+
+
+
+                                    <td>
+                                        <a href="/Group/Edit/@item.Id" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                        <a href="/Group/Delete/@item.Id" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                    </td>
+                                </tr>
+
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div> <!-- end card-body-->
+        </div> <!-- end card-->
+    </div> <!-- end col -->
+</div>
+<!-- end row -->
