@@ -1,0 +1,16 @@
+C:\Users\HP\Downloads\learning-aspdotnet-fall-2021-2022-sec-b-main\Final Term\NewsPortalTask\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+C:\Users\HP\Downloads\learning-aspdotnet-fall-2021-2022-sec-b-main\Final Term\NewsPortalTask\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+C:\Users\HP\Downloads\learning-aspdotnet-fall-2021-2022-sec-b-main\Final Term\NewsPortalTask\BusinessLogicLayer\bin\Debug\AutoMapper.dll
+C:\Users\HP\Downloads\learning-aspdotnet-fall-2021-2022-sec-b-main\Final Term\NewsPortalTask\BusinessLogicLayer\bin\Debug\BusinessEntityLayer.dll
+C:\Users\HP\Downloads\learning-aspdotnet-fall-2021-2022-sec-b-main\Final Term\NewsPortalTask\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\HP\Downloads\learning-aspdotnet-fall-2021-2022-sec-b-main\Final Term\NewsPortalTask\BusinessLogicLayer\bin\Debug\EntityFramework.dll
+C:\Users\HP\Downloads\learning-aspdotnet-fall-2021-2022-sec-b-main\Final Term\NewsPortalTask\BusinessLogicLayer\bin\Debug\BusinessEntityLayer.pdb
+C:\Users\HP\Downloads\learning-aspdotnet-fall-2021-2022-sec-b-main\Final Term\NewsPortalTask\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\HP\Downloads\learning-aspdotnet-fall-2021-2022-sec-b-main\Final Term\NewsPortalTask\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\HP\Downloads\learning-aspdotnet-fall-2021-2022-sec-b-main\Final Term\NewsPortalTask\BusinessLogicLayer\bin\Debug\AutoMapper.xml
+C:\Users\HP\Downloads\learning-aspdotnet-fall-2021-2022-sec-b-main\Final Term\NewsPortalTask\BusinessLogicLayer\bin\Debug\EntityFramework.xml
+C:\Users\HP\Downloads\learning-aspdotnet-fall-2021-2022-sec-b-main\Final Term\NewsPortalTask\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\HP\Downloads\learning-aspdotnet-fall-2021-2022-sec-b-main\Final Term\NewsPortalTask\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\HP\Downloads\learning-aspdotnet-fall-2021-2022-sec-b-main\Final Term\NewsPortalTask\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csproj.CopyComplete
+C:\Users\HP\Downloads\learning-aspdotnet-fall-2021-2022-sec-b-main\Final Term\NewsPortalTask\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+C:\Users\HP\Downloads\learning-aspdotnet-fall-2021-2022-sec-b-main\Final Term\NewsPortalTask\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb

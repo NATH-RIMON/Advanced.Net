@@ -1,0 +1,6 @@
+C:\Users\HP\Downloads\learning-aspdotnet-fall-2021-2022-sec-b-main\Final Term\NewsPortalTask\BusinessEntityLayer\bin\Debug\BusinessEntityLayer.dll
+C:\Users\HP\Downloads\learning-aspdotnet-fall-2021-2022-sec-b-main\Final Term\NewsPortalTask\BusinessEntityLayer\bin\Debug\BusinessEntityLayer.pdb
+C:\Users\HP\Downloads\learning-aspdotnet-fall-2021-2022-sec-b-main\Final Term\NewsPortalTask\BusinessEntityLayer\obj\Debug\BusinessEntityLayer.csproj.AssemblyReference.cache
+C:\Users\HP\Downloads\learning-aspdotnet-fall-2021-2022-sec-b-main\Final Term\NewsPortalTask\BusinessEntityLayer\obj\Debug\BusinessEntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\HP\Downloads\learning-aspdotnet-fall-2021-2022-sec-b-main\Final Term\NewsPortalTask\BusinessEntityLayer\obj\Debug\BusinessEntityLayer.dll
+C:\Users\HP\Downloads\learning-aspdotnet-fall-2021-2022-sec-b-main\Final Term\NewsPortalTask\BusinessEntityLayer\obj\Debug\BusinessEntityLayer.pdb

@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "597f4e64-f7cb-4aa8-aa62-d8bb1045746f": {
+      "ProjectGuid": "597f4e64-f7cb-4aa8-aa62-d8bb1045746f",
+      "DisplayName": "NewsPortalTask",
+      "ColorIndex": 0
+    },
+    "c282be44-be4a-4b73-9c44-e3c39dd74261": {
+      "ProjectGuid": "c282be44-be4a-4b73-9c44-e3c39dd74261",
+      "DisplayName": "DataAccessLayer",
+      "ColorIndex": 1
+    },
+    "f8e8e510-bdfa-456c-a0fa-d7369c8e1270": {
+      "ProjectGuid": "f8e8e510-bdfa-456c-a0fa-d7369c8e1270",
+      "DisplayName": "BusinessEntityLayer",
+      "ColorIndex": 2
+    },
+    "666c00ef-cb33-4992-a39b-a5c79e45cf89": {
+      "ProjectGuid": "666c00ef-cb33-4992-a39b-a5c79e45cf89",
+      "DisplayName": "BusinessLogicLayer",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}
