@@ -83,7 +83,6 @@
     <Compile Include="React.cs">
       <DependentUpon>NewsPortalEDM.tt</DependentUpon>
     </Compile>
-    <Compile Include="ReactRepo.cs" />
     <Compile Include="User.cs">
       <DependentUpon>NewsPortalEDM.tt</DependentUpon>
     </Compile>
