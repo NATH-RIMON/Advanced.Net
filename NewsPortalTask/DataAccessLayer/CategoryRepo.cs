@@ -8,8 +8,8 @@ namespace DataAccessLayer
 {
     public class CategoryRepo : IRepository<Category,int>
     {
-        dotnetcourseEntities _db;
-        public CategoryRepo(dotnetcourseEntities db)
+        News_PortalEntities _db;
+        public CategoryRepo(News_PortalEntities db)
         {
             _db = db;
         }

@@ -11,18 +11,29 @@ using System.Web.Script.Serialization;
 namespace Project.Controllers
 {
     [BasicAuthFilter, UserAccess]
+
+
     public class ContactController : Controller
     {
+        
         // GET: Contract
         public ActionResult Index()
         {
+            
+            
+           
             var db = new ProjectEntities();
-            var data = db.Contacts.ToList();
+
+            
+            var userId = (int)Session["UserId"];              
+            //var data = (from c in db.Contacts where c.Id == userId select c);
+            //
+            var data = from g in db.Groups
+                       join c in db.Contacts on g.Id equals c.GroupId where g.UserId==userId
+                       select c;
+
+            
             return View(data);
-
-
-
-
         }
         public ActionResult Details(int Id)
         {

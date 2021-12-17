@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
+using System.Web.UI.WebControls;
 
 namespace Project
 {
@@ -34,6 +36,26 @@ namespace Project
             else
             {
                // authCookie.Response.Redirect("~/Views/Shared/Page_403.cshtml");
+            }
+        }
+
+        /*
+        protected void Application_Error(object sender_, CommandEventArgs e_)
+        {
+            Exception exception = Server.GetLastError();
+            if (exception is CryptographicException)
+            {
+                FormsAuthentication.SignOut();
+            }
+        }
+
+        */
+        void Session_Start(object sender, EventArgs e)
+        {
+            if (Session.IsNewSession && Session["UserId"] == null)
+            {
+                Session["UserId"] = "";
+                Response.Redirect("/Auth/Login");
             }
         }
     }

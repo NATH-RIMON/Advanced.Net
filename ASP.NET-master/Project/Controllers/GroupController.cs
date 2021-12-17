@@ -11,6 +11,7 @@ namespace Project.Controllers
     [BasicAuthFilter, UserAccess]
     public class GroupController : Controller
     {
+
         // GET: Group
         public ActionResult Index()
         {

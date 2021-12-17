@@ -1,4 +1,5 @@
-﻿using Project.Models.Entities;
+﻿using Project.Auth;
+using Project.Models.Entities;
 using Project.Models.VM;
 using Project.Service;
 using System;
@@ -9,22 +10,25 @@ using System.Web.Mvc;
 
 namespace Project.Controllers
 {
+    [BasicAuthFilter, UserAccess]
     public class BulkSenderController : Controller
     {
         // GET: BulkSender
-        BulkSenderModel bsm = new BulkSenderModel();
+        readonly BulkSenderModel bsm = new BulkSenderModel();
+
+
         public ActionResult Index()
         {
             //var userId = 5;
             if (Session["UserId"] != null)
             {
-                this.updateData();
+                this.UpdateData();
 
             }
             return View(bsm);
         }
 
-        public void updateData()
+        public void UpdateData()
         {
             var userId = (int)Session["UserId"];
             var db = new ProjectEntities();
@@ -49,12 +53,13 @@ namespace Project.Controllers
                 int failCount = 0;
                 int sucessCount = 0;
 
+                string tempMsg = null;
 
                 foreach (var item in dataContacts)
                 {
                     SMSProcess smsProcess = new SMSProcess();
 
-                    string tempMsg=null;
+                    tempMsg = bm.Message;
 
                     if (bm.Message.Contains("{Name}"))
                     {
@@ -90,7 +95,7 @@ namespace Project.Controllers
                     }
 
                 }
-                this.updateData();
+                this.UpdateData();
 
                 ViewBag.SuccessMessage = "Success "+sucessCount+" Failed "+failCount;
                 //return RedirectToAction("Home\Index");

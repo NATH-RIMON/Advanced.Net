@@ -12,6 +12,7 @@ namespace Project.Controllers
 
     public class MessageController : Controller
     {
+
         // GET: Message
         public ActionResult Index()
         {

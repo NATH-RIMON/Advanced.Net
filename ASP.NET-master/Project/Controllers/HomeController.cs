@@ -17,9 +17,11 @@ namespace Project.Controllers
     {
         //private object httpContext;
 
+
+
         public ActionResult Index()
         {
-            HomeModel hm = new HomeModel();
+            DashboardModel hm = new DashboardModel();
 
             if (Session["UserId"] != null)
             {
@@ -35,16 +37,21 @@ namespace Project.Controllers
                 var successMessages = (from c in db.Messages where c.UserId == userId && c.Status == "Success" select c).ToList();
                 var sendMessages = (from c in db.Messages where c.UserId == userId select c).ToList();
                 var usersData = (from c in db.Users where c.Id == userId select c).FirstOrDefault();
-                hm.Templates = dataTemplates.Count;
-                hm.Groups = dataGroups.Count;
-                hm.Balance = usersData.Balance;
-                hm.SendMessages = sendMessages.Count;
-                hm.FailedMessages = failedMessages.Count;
-                hm.SuccessMessages = successMessages.Count;
+                hm.Templates = dataTemplates.Count.ToString();
+                hm.Groups = dataGroups.Count.ToString();
+                hm.Balance = usersData.Balance.ToString("N2");
+                hm.SendMessages = sendMessages.Count.ToString();
+                hm.FailedMessages = failedMessages.Count.ToString();
+                hm.SuccessMessages = successMessages.Count.ToString();
+                hm.User = (from c in db.Users where c.Id == userId select c).FirstOrDefault(); 
             }
 
             return View(hm);
         }
+
+       
+
+
 
         public ActionResult About()
         {

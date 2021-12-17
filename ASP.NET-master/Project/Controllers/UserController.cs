@@ -11,6 +11,7 @@ namespace Project.Controllers
     [AdminAccess, BasicAuthFilter]
     public class UserController : Controller
     {
+
         // GET: User
         public ActionResult Index()
         {

@@ -12,7 +12,7 @@ namespace Project.Service
 
         public int Count { set; get; }
 
-        public void count(string msg)
+        public void Calculate(string msg)
         {
             decimal count;
             if (IsUnicode(msg))

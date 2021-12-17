@@ -11,6 +11,7 @@ namespace Project.Controllers
     [BasicAuthFilter, UserAccess]
     public class TemplateController : Controller
     {
+
         // GET: Template
         public ActionResult Index()
         {

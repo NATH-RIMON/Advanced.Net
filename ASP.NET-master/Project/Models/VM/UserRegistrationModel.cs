@@ -14,6 +14,7 @@ namespace Project.Models.VM
         public string Name { get; set; }
         [Required(ErrorMessage = "Please put email Address")]
         [MinLength(5)]
+        [EmailAddress]
         public string Email { get; set; }
         [Required]
         [MinLength(6)]

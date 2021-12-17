@@ -16,11 +16,11 @@ namespace Project.Controllers
     public class SenderController : Controller
     {
         // GET: Sender
-        SenderModel sm = new SenderModel();
+        readonly SenderModel sm = new SenderModel();
 
 
 
-        public void updateData()
+        public void UpdateData()
         {
             //var userId = 5;
             var userId = (int)Session["UserId"];
@@ -41,7 +41,7 @@ namespace Project.Controllers
         }
         public ActionResult Index()
         {
-            this.updateData();
+            this.UpdateData();
             return View(sm);
 
 
@@ -58,7 +58,7 @@ namespace Project.Controllers
         {
             if (ModelState.IsValid)
             {
-                this.updateData();
+                this.UpdateData();
                 int userId = (int)Session["UserId"];
                 //int userId = 5;
 

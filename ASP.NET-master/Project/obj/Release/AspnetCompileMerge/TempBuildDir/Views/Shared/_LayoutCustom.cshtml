@@ -1,0 +1,747 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - SMS Gateway</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="">
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico">
+
+
+
+    <!-- third party css -->
+    <link href="/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <!-- third party css end -->
+
+
+
+    <!-- App css  creative  -->
+    <link href="/assets/css/bootstrap-creative.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
+    <link href="/assets/css/app-creative.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
+
+    <link href="/assets/css/bootstrap-creative-dark.min.css" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" />
+    <link href="/assets/css/app-creative-dark.min.css" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
+
+
+    <!-- icons -->
+    <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- custom css -->
+    <link href="/assets/css/custom.css" rel="stylesheet" type="text/css" />
+
+
+
+    <script src="/assets/libs/pace/pace.min.js"></script>
+
+   
+
+</head>
+
+<!-- body start -->
+<body class="loading" data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "light", "size": "default", "showuser": false}, "topbar": {"color": "dark"}, "showRightSidebarOnPageLoad": false}'>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- Topbar Start -->
+        <!-- Topbar Start -->
+        <div class="navbar-custom">
+            <div class="container-fluid">
+                <ul class="list-unstyled topnav-menu float-right mb-0">
+
+                    <li class="d-none d-lg-block">
+                        <form class="app-search" method="get" action="Search">
+                            <div class="app-search-box dropdown">
+                                <div class="input-group">
+                                    <input type="search" name="search" class="form-control" placeholder="Search..." id="top-search">
+                                    <div class="input-group-append">
+                                        <button class="btn" type="submit">
+                                            <i class="fe-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </li>
+
+                    <li class="dropdown d-inline-block d-lg-none">
+                        <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <i class="fe-search noti-icon"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-lg dropdown-menu-right p-0">
+                            <form class="p-3">
+                                <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                            </form>
+                        </div>
+                    </li>
+
+                    <li class="dropdown d-none d-lg-inline-block">
+                        <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-toggle="fullscreen" href="#">
+                            <i class="fe-maximize noti-icon"></i>
+                        </a>
+                    </li>
+
+
+
+                    <li class="dropdown notification-list topbar-dropdown">
+                        <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <i class="fe-bell noti-icon"></i>
+                            <span class="badge badge-danger rounded-circle noti-icon-badge">9</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+
+                            <!-- item-->
+                            <div class="dropdown-item noti-title">
+                                <h5 class="m-0">
+                                    <span class="float-right">
+                                        <a href="" class="text-dark">
+                                            <small>Clear All</small>
+                                        </a>
+                                    </span>Notification
+                                </h5>
+                            </div>
+
+                            <div class="noti-scroll" data-simplebar="init">
+                                <div class="simplebar-wrapper" style="margin: 0px;">
+                                    <div class="simplebar-height-auto-observer-wrapper">
+                                        <div class="simplebar-height-auto-observer"></div>
+                                    </div>
+                                    <div class="simplebar-mask">
+                                        <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                                            <div class="simplebar-content-wrapper" style="height: auto; overflow: hidden;">
+                                                <div class="simplebar-content" style="padding: 0px;">
+
+
+
+                                                    <!-- item-->
+                                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                                        <div class="notify-icon">
+                                                            <img src="/assets/images/users/user-4.jpg" class="img-fluid rounded-circle" alt="">
+                                                        </div>
+                                                        <p class="notify-details">Karen Robinson</p>
+                                                        <p class="text-muted mb-0 user-msg">
+                                                            <small>Wow ! this admin looks good and awesome design</small>
+                                                        </p>
+                                                    </a>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="simplebar-placeholder" style="width: 0px; height: 0px;"></div>
+                                </div>
+                                <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
+                                    <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
+                                </div>
+                                <div class="simplebar-track simplebar-vertical" style="visibility: hidden;">
+                                    <div class="simplebar-scrollbar" style="height: 0px; display: none;"></div>
+                                </div>
+                            </div>
+
+                            <!-- All-->
+                            <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                                View all
+                                <i class="fe-arrow-right"></i>
+                            </a>
+
+                        </div>
+                    </li>
+
+                    <li class="dropdown notification-list topbar-dropdown">
+                        <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="/assets/images/users/user-5.jpg" alt="user-image" class="rounded-circle">
+                            <span class="pro-user-name ml-1">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    @User.Identity.Name
+                                }
+                                <i class="mdi mdi-chevron-down"></i>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                            <!-- item-->
+                            <div class="dropdown-header noti-title">
+                                <h6 class="text-overflow m-0">Welcome !</h6>
+                            </div>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="fe-user"></i>
+                                <span>My Account</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <i class="fe-settings"></i>
+                                <span>Settings</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="/Home/ChangePassword" class="dropdown-item notify-item">
+                                <i class="fe-lock"></i>
+                                <span>Password Change</span>
+                            </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <!-- item-->
+                            <a href="/Auth/Logout" class="dropdown-item notify-item">
+                                <i class="fe-log-out"></i>
+                                <span>Logout</span>
+                            </a>
+
+                        </div>
+                    </li>
+
+                    <li class="dropdown notification-list">
+                        <a href="javascript:void(0);" class="nav-link right-bar-toggle waves-effect waves-light">
+                            <i class="fe-settings noti-icon"></i>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!-- LOGO -->
+                <div class="logo-box">
+                    <a href="Index" class="logo logo-dark text-center">
+                        <span class="logo-sm">
+                            <img src="/assets/images/logo-sm.png" alt="" height="22">
+                            <!-- <span class="logo-lg-text-light">SMS Gateway</span> -->
+                        </span>
+                        <span class="logo-lg">
+                            <img src="/assets/images/logo-dark.png" alt="" height="20">
+                            <!-- <span class="logo-lg-text-light">U</span> -->
+                        </span>
+                    </a>
+
+                    <a href="Index" class="logo logo-light text-center">
+                        <span class="logo-sm">
+                            <img src="/assets/images/logo-sm.png" alt="" height="22">
+                        </span>
+                        <span class="logo-lg">
+                            <img src="/assets/images/logo-light.png" alt="" height="28">
+                        </span>
+                    </a>
+                </div>
+
+                <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                    <li>
+                        <button class="button-menu-mobile waves-effect waves-light">
+                            <i class="fe-menu"></i>
+                        </button>
+                    </li>
+
+                    <li>
+                        <!-- Mobile menu toggle(Horizontal Layout)-->
+                        <a class="navbar-toggle nav-link" data-toggle="collapse" data-target="#topnav-menu-content">
+                            <div class="lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                        <!-- End mobile menu toggle-->
+                    </li>
+
+                    <li class="dropdown d-none d-xl-block">
+                        <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            Create New
+                            <i class="mdi mdi-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <i class="fe-briefcase mr-1"></i>
+                                <span>New Projects</span>
+                            </a>
+
+
+                        </div>
+                    </li>
+
+                    <li class="dropdown dropdown-mega d-none d-xl-block">
+                        <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            Mega Menu
+                            <i class="mdi mdi-chevron-down"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- end Topbar -->
+        <!-- end Topbar -->
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left-side-menu">
+
+            <div class="h-100 menuitem-active" data-simplebar="init">
+                <div class="simplebar-wrapper" style="margin: 0px;">
+                    <div class="simplebar-height-auto-observer-wrapper">
+                        <div class="simplebar-height-auto-observer"></div>
+                    </div>
+                    <div class="simplebar-mask">
+                        <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                            <div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden scroll;">
+                                <div class="simplebar-content" style="padding: 0px;">
+
+                                    <!-- User box -->
+                                    <div class="user-box text-center">
+                                        <img src="/assets/images/users/user-1.jpg" alt="user-img" title="Mat Helme" class="rounded-circle avatar-md">
+                                        <div class="dropdown">
+                                            <a href="javascript: void(0);" class="text-dark dropdown-toggle h5 mt-2 mb-1 d-block" data-toggle="dropdown">Geneva Kennedy</a>
+                                            <div class="dropdown-menu user-pro-dropdown">
+
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                                    <i class="fe-user mr-1"></i>
+                                                    <span>My Account</span>
+                                                </a>
+
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                                    <i class="fe-settings mr-1"></i>
+                                                    <span>Settings</span>
+                                                </a>
+
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                                    <i class="fe-lock mr-1"></i>
+                                                    <span>Lock Screen</span>
+                                                </a>
+
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                                    <i class="fe-log-out mr-1"></i>
+                                                    <span>Logout</span>
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                        <p class="text-muted">Admin Head</p>
+                                    </div>
+
+                                    <!--- Sidemenu -->
+                                    <div id="sidebar-menu" class="show">
+
+                                        <ul id="side-menu">
+
+                                            <li class="menu-title">Navigation</li>
+
+                                            <li class="menuitem-active">
+                                                <a href="/Home/Index" class="active">
+                                                    <i class="mdi mdi-view-dashboard-outline"></i>
+                                                    <span> Dashboard </span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#h_group" data-toggle="collapse">
+                                                    <i class="mdi mdi-bullseye"></i>
+                                                    <span> Group </span>
+                                                    <span class="menu-arrow"></span>
+                                                </a>
+                                                <div class="collapse" id="h_group">
+                                                    <ul class="nav-second-level">
+                                                        <li>@Html.ActionLink("View", "Index", "Group")</li>
+                                                        <li>@Html.ActionLink("Create", "Create", "Group")</li>
+
+                                                    </ul>
+                                                </div>
+
+                                            </li>
+
+
+                                            <li>
+                                                <a href="#h_contact" data-toggle="collapse">
+                                                    <i class="mdi mdi-account-multiple-outline"></i>
+                                                    <span> Contact </span>
+                                                    <span class="menu-arrow"></span>
+                                                </a>
+                                                <div class="collapse" id="h_contact">
+                                                    <ul class="nav-second-level">
+                                                        <li>@Html.ActionLink("View", "Index", "Contact")</li>
+                                                        <li>@Html.ActionLink("Create", "Create", "Contact")</li>
+
+                                                    </ul>
+                                                </div>
+
+                                            </li>
+
+
+                                            <li>
+                                                <a href="#h_template" data-toggle="collapse">
+                                                    <i class="mdi mdi-view-dashboard-outline"></i>
+                                                    <span> Template </span>
+                                                    <span class="menu-arrow"></span>
+                                                </a>
+                                                <div class="collapse" id="h_template">
+                                                    <ul class="nav-second-level">
+                                                        <li>@Html.ActionLink("View", "Index", "Template")</li>
+                                                        <li>@Html.ActionLink("Create", "Create", "Template")</li>
+
+                                                    </ul>
+                                                </div>
+
+                                            </li>
+
+
+                                            <li class="menuitem-active">
+                                                <a href="/Sender/Index" class="active">
+                                                    <i class="fe-message-square mr-1"></i>
+                                                    <span> Sender </span>
+                                                </a>
+                                            </li>
+
+
+                                            <li class="menuitem-active">
+                                                <a href="/BulkSender/Index" class="active">
+                                                    <i class="mdi mdi-ballot-recount mr-1"></i>
+                                                    <span> Bulk Sender </span>
+                                                </a>
+                                            </li>
+
+
+                                            <li class="menuitem-active">
+                                                <a href="/Message/Index" class="active">
+                                                    <i class="fe-bar-chart-line mr-1"></i>
+                                                    <span> Messeges </span>
+                                                </a>
+                                            </li>
+
+
+                                            <li>
+                                                <a href="#h_user" data-toggle="collapse">
+                                                    <i class="mdi mdi-account-convert"></i>
+                                                    <span> User </span>
+                                                    <span class="menu-arrow"></span>
+                                                </a>
+                                                <div class="collapse" id="h_user">
+                                                    <ul class="nav-second-level">
+                                                        <li>@Html.ActionLink("View", "Index", "User")</li>
+                                                        <li>@Html.ActionLink("Create", "Create", "User")</li>
+
+                                                    </ul>
+                                                </div>
+
+                                            </li>
+
+
+                                            <li>
+                                                <a href="#h_SenderNumber" data-toggle="collapse">
+                                                    <i class="fa fa-server"></i>
+                                                    <span> SenderNumber </span>
+                                                    <span class="menu-arrow"></span>
+                                                </a>
+                                                <div class="collapse" id="h_SenderNumber">
+                                                    <ul class="nav-second-level">
+                                                        <li>@Html.ActionLink("View", "Index", "SenderNumber")</li>
+                                                        <li>@Html.ActionLink("Create", "Create", "SenderNumber")</li>
+
+                                                    </ul>
+                                                </div>
+
+                                            </li>
+
+
+                                            <li class="menuitem-active">
+                                                <a href="/Admin/Index" class="active">
+                                                    <i class="fe-message-square mr-1"></i>
+                                                    <span> Admin </span>
+                                                </a>
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+                                    <!-- End Sidebar -->
+
+                                    <div class="clearfix"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="simplebar-placeholder" style="width: auto; height: 872px;"></div>
+                </div>
+                <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
+                    <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
+                </div>
+                <div class="simplebar-track simplebar-vertical" style="visibility: visible;">
+                    <div class="simplebar-scrollbar" style="height: 51px; transform: translate3d(0px, 0px, 0px); display: block;"></div>
+                </div>
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+            <div class="content">
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+            </div> <!-- content -->
+            <!-- Footer Start -->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            @DateTime.Now.Year &copy; SMSGateway By <a href="https://tnrsoft.com/">TNRSOFT</a>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="text-md-right footer-links d-none d-sm-block">
+                                <a href="https://tnrsoft.com/#about">About Us</a>
+                                <a href="https://www.facebook.com/tnrsoft">Help</a>
+                                <a href="https://tnrsoft.com/#contact_us">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end Footer -->
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+
+    </div>
+    <!-- END wrapper -->
+    <!-- Right Sidebar -->
+    <div class="right-bar">
+        <div data-simplebar="init" class="h-100">
+            <div class="simplebar-wrapper" style="margin: 0px;">
+                <div class="simplebar-height-auto-observer-wrapper">
+                    <div class="simplebar-height-auto-observer"></div>
+                </div>
+                <div class="simplebar-mask">
+                    <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                        <div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden scroll;">
+                            <div class="simplebar-content" style="padding: 0px;">
+
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs nav-bordered nav-justified" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link py-2" data-toggle="tab" href="#chat-tab" role="tab">
+                                            <i class="mdi mdi-message-text d-block font-22 my-1"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link py-2" data-toggle="tab" href="#tasks-tab" role="tab">
+                                            <i class="mdi mdi-format-list-checkbox d-block font-22 my-1"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link py-2 active" data-toggle="tab" href="#settings-tab" role="tab">
+                                            <i class="mdi mdi-cog-outline d-block font-22 my-1"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <!-- Tab panes -->
+                                <div class="tab-content pt-0">
+                                    <div class="tab-pane active" id="settings-tab" role="tabpanel">
+                                        <h6 class="font-weight-medium px-3 m-0 py-2 font-13 text-uppercase bg-light">
+                                            <span class="d-block py-1">Theme Settings</span>
+                                        </h6>
+
+                                        <div class="p-3">
+                                            <div class="alert alert-warning" role="alert">
+                                                <strong>Customize </strong> the overall color scheme, sidebar menu, etc.
+                                            </div>
+
+                                            <h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">Color Scheme</h6>
+                                            <div class="custom-control custom-switch mb-1">
+                                                <input type="radio" class="custom-control-input" name="color-scheme-mode"
+                                                       value="light" id="light-mode-check" checked="">
+                                                <label class="custom-control-label" for="light-mode-check">
+                                                    Light
+                                                    Mode
+                                                </label>
+                                            </div>
+
+                                            <div class="custom-control custom-switch mb-1">
+                                                <input type="radio" class="custom-control-input" name="color-scheme-mode"
+                                                       value="dark" id="dark-mode-check">
+                                                <label class="custom-control-label" for="dark-mode-check">Dark Mode</label>
+                                            </div>
+
+                                            <!-- Width -->
+                                            <h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">Width</h6>
+                                            <div class="custom-control custom-switch mb-1">
+                                                <input type="radio" class="custom-control-input" name="width" value="fluid"
+                                                       id="fluid-check" checked="">
+                                                <label class="custom-control-label" for="fluid-check">Fluid</label>
+                                            </div>
+                                            <div class="custom-control custom-switch mb-1">
+                                                <input type="radio" class="custom-control-input" name="width" value="boxed"
+                                                       id="boxed-check">
+                                                <label class="custom-control-label" for="boxed-check">Boxed</label>
+                                            </div>
+
+                                            <!-- Menu positions -->
+                                            <h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">
+                                                Menus (Leftsidebar and
+                                                Topbar) Positon
+                                            </h6>
+
+                                            <div class="custom-control custom-switch mb-1">
+                                                <input type="radio" class="custom-control-input" name="menus-position"
+                                                       value="fixed" id="fixed-check" checked="">
+                                                <label class="custom-control-label" for="fixed-check">Fixed</label>
+                                            </div>
+
+                                            <div class="custom-control custom-switch mb-1">
+                                                <input type="radio" class="custom-control-input" name="menus-position"
+                                                       value="scrollable" id="scrollable-check">
+                                                <label class="custom-control-label"
+                                                       for="scrollable-check">Scrollable</label>
+                                            </div>
+
+                                            <!-- Left Sidebar-->
+                                            <h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">Left Sidebar Color</h6>
+
+                                            <div class="custom-control custom-switch mb-1">
+                                                <input type="radio" class="custom-control-input" name="leftsidebar-color"
+                                                       value="light" id="light-check" checked="">
+                                                <label class="custom-control-label" for="light-check">Light</label>
+                                            </div>
+
+                                            <div class="custom-control custom-switch mb-1">
+                                                <input type="radio" class="custom-control-input" name="leftsidebar-color"
+                                                       value="dark" id="dark-check">
+                                                <label class="custom-control-label" for="dark-check">Dark</label>
+                                            </div>
+
+                                            <div class="custom-control custom-switch mb-1">
+                                                <input type="radio" class="custom-control-input" name="leftsidebar-color"
+                                                       value="brand" id="brand-check">
+                                                <label class="custom-control-label" for="brand-check">Brand</label>
+                                            </div>
+
+                                            <div class="custom-control custom-switch mb-3">
+                                                <input type="radio" class="custom-control-input" name="leftsidebar-color"
+                                                       value="gradient" id="gradient-check">
+                                                <label class="custom-control-label" for="gradient-check">Gradient</label>
+                                            </div>
+
+                                            <!-- size -->
+                                            <h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">Left Sidebar Size</h6>
+
+                                            <div class="custom-control custom-switch mb-1">
+                                                <input type="radio" class="custom-control-input" name="leftsidebar-size"
+                                                       value="default" id="default-size-check" checked="">
+                                                <label class="custom-control-label" for="default-size-check">Default</label>
+                                            </div>
+
+                                            <div class="custom-control custom-switch mb-1">
+                                                <input type="radio" class="custom-control-input" name="leftsidebar-size"
+                                                       value="condensed" id="condensed-check">
+                                                <label class="custom-control-label" for="condensed-check">
+                                                    Condensed
+                                                    <small>(Extra Small size)</small>
+                                                </label>
+                                            </div>
+
+                                            <div class="custom-control custom-switch mb-1">
+                                                <input type="radio" class="custom-control-input" name="leftsidebar-size"
+                                                       value="compact" id="compact-check">
+                                                <label class="custom-control-label" for="compact-check">
+                                                    Compact
+                                                    <small>(Small size)</small>
+                                                </label>
+                                            </div>
+
+                                            <!-- User info -->
+                                            <h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">Sidebar User Info</h6>
+
+                                            <div class="custom-control custom-switch mb-1">
+                                                <input type="checkbox" class="custom-control-input" name="leftsidebar-user"
+                                                       value="fixed" id="sidebaruser-check">
+                                                <label class="custom-control-label" for="sidebaruser-check">Enable</label>
+                                            </div>
+
+
+                                            <!-- Topbar -->
+                                            <h6 class="font-weight-medium font-14 mt-4 mb-2 pb-1">Topbar</h6>
+
+                                            <div class="custom-control custom-switch mb-1">
+                                                <input type="radio" class="custom-control-input" name="topbar-color"
+                                                       value="dark" id="darktopbar-check" checked="">
+                                                <label class="custom-control-label" for="darktopbar-check">Dark</label>
+                                            </div>
+
+                                            <div class="custom-control custom-switch mb-1">
+                                                <input type="radio" class="custom-control-input" name="topbar-color"
+                                                       value="light" id="lighttopbar-check">
+                                                <label class="custom-control-label" for="lighttopbar-check">Light</label>
+                                            </div>
+
+
+                                            <button class="btn btn-primary btn-block mt-4" id="resetBtn">
+                                                Reset to
+                                                Default
+                                            </button>
+
+                                            <a href="#" class="btn btn-danger btn-block mt-3" target="_blank">
+                                                <i class="mdi mdi-basket mr-1"></i> Upgrade Now
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="simplebar-placeholder" style="width: auto; height: 1285px;"></div>
+            </div>
+            <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
+                <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
+            </div>
+            <div class="simplebar-track simplebar-vertical" style="visibility: visible;">
+                <div class="simplebar-scrollbar"
+                     style="height: 41px; transform: translate3d(0px, 0px, 0px); display: block;"></div>
+            </div>
+        </div> <!-- end slimscroll-menu-->
+    </div>
+    <!-- /Right-bar -->
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+
+
+
+
+
+    @Scripts.Render("~/assets/js")
+
+
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+
+    <script src="/assets/js/custom.js"></script>
+
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
+

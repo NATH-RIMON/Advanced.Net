@@ -42,7 +42,7 @@ namespace BusinessLogicLayer
             {
                 c.CreateMap<News, NewsModel>();
                 c.CreateMap<Comment, CommentModel>();
-                c.CreateMap<React, ReactModel>();
+                
             });
             var mapper = new Mapper(config);
             var data = mapper.Map<List<NewsModel>>(DataAccessFactory.NewsDataAccess().Get());
@@ -54,7 +54,7 @@ namespace BusinessLogicLayer
             {
                 c.CreateMap<News, NewsModel>();
                 c.CreateMap<Comment, CommentModel>();
-                c.CreateMap<React, ReactModel>();
+                
             });
             var mapper = new Mapper(config);
             var data = mapper.Map<NewsModel>(DataAccessFactory.NewsDataAccess().Get(id));
@@ -66,7 +66,7 @@ namespace BusinessLogicLayer
             {
                 c.CreateMap<News, NewsModel>();
                 c.CreateMap<Comment, CommentModel>();
-                c.CreateMap<React, ReactModel>();
+                
             });
             var mapper = new Mapper(config);
             var data = mapper.Map<List<NewsModel>>(DataAccessFactory.NewsDataAccess().GetByDate(dateTime));
@@ -78,7 +78,7 @@ namespace BusinessLogicLayer
             {
                 c.CreateMap<News, NewsModel>();
                 c.CreateMap<Comment, CommentModel>();
-                c.CreateMap<React, ReactModel>();
+                
             });
             var mapper = new Mapper(config);
             var data = mapper.Map<List<NewsModel>>(DataAccessFactory.NewsDataAccess().GetByCategory(category));
@@ -90,7 +90,7 @@ namespace BusinessLogicLayer
             {
                 c.CreateMap<News, NewsModel>();
                 c.CreateMap<Comment, CommentModel>();
-                c.CreateMap<React, ReactModel>();
+                
             });
             var mapper = new Mapper(config);
             var data = mapper.Map<List<NewsModel>>(DataAccessFactory.NewsDataAccess().GetByDateCategory(dateTime, category));

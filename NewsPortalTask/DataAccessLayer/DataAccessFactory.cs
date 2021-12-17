@@ -8,10 +8,10 @@ namespace DataAccessLayer
 {
     public class DataAccessFactory
     {
-        static dotnetcourseEntities db;
+        static News_PortalEntities db;
         static DataAccessFactory()
         {
-            db = new dotnetcourseEntities();
+            db = new News_PortalEntities();
         }
         public static IRepository<News, int> NewsDataAccess()
         {
@@ -21,10 +21,7 @@ namespace DataAccessLayer
         {
             return new CategoryRepo(db);
         }
-        public static IRepository<React, int> ReactDataAccess()
-        {
-            return new ReactRepo(db);
-        }
+       
         public static IRepository<Comment, int> CommentDataAccess()
         {
             return new CommentRepo(db);

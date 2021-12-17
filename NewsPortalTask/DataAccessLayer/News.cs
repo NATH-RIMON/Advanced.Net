@@ -18,7 +18,6 @@ namespace DataAccessLayer
         public News()
         {
             this.Comments = new HashSet<Comment>();
-            this.Reacts = new HashSet<React>();
         }
     
         public int Id { get; set; }
@@ -31,7 +30,5 @@ namespace DataAccessLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Comment> Comments { get; set; }
         public virtual User User { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<React> Reacts { get; set; }
     }
 }

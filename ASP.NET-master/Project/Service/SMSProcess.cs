@@ -24,7 +24,7 @@ namespace Project.Service
             SMSSender sms = new SMSSender();
             SMSLength smsLength = new SMSLength();
             Message messageModel = new Message();
-            smsLength.count(um.Message.Trim());
+            smsLength.Calculate(um.Message.Trim());
             var db = new ProjectEntities();
             var usersData = (from c in db.Users where c.Id == userId select c).FirstOrDefault();
             double balance = usersData.Balance;

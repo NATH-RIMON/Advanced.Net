@@ -15,20 +15,23 @@ namespace Project.Service
 
 
 
-        private string result = "";
+        private string result;
         private WebRequest request = null;
         private HttpWebResponse response = null;
 
         public SMSSender()
         {
-            result = "";
+            
             request = null;
             response = null;
         }
         public bool Send()
         {
 
-            string url = "https://sms.tnrsoft.com/services/send.php?key=" + ApiToken + "&number=" + Numbers + "&message=" + System.Uri.EscapeUriString(Message) + "&devices=" + DeviceId + "&type=sms&prioritize=1";
+            string url = "http://sms.tnrsoft.com/services/send.php?key=" + ApiToken + "&number=" + Numbers + "&message=" + Uri.EscapeUriString(Message) + "&devices=" + DeviceId + "&type=sms&prioritize=1";
+
+
+           // System.Diagnostics.Debug.WriteLine(url);
 
             try
             {
@@ -40,9 +43,9 @@ namespace Project.Service
                 // Send the 'HttpWebRequest' and wait for response.
                 response = (HttpWebResponse)request.GetResponse();
                 Stream stream = response.GetResponseStream();
-                Encoding ec = System.Text.Encoding.GetEncoding("utf-8");
+                Encoding ec = Encoding.GetEncoding("utf-8");
                 using (StreamReader reader = new
-                System.IO.StreamReader(stream, ec))
+                StreamReader(stream, ec))
                 {
                     result = reader.ReadToEnd();
                     ///Console.WriteLine(result);
@@ -51,9 +54,9 @@ namespace Project.Service
                 stream.Close();
                 return true;
             }
-            catch (Exception exp)
+            catch
             {
-                //Console.WriteLine(exp.ToString());
+                
                 return false;
             }
             finally

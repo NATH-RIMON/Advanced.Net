@@ -8,8 +8,8 @@ namespace DataAccessLayer
 {
     public class CommentRepo : IRepository<Comment,int>
     {
-        dotnetcourseEntities _db;
-        public CommentRepo(dotnetcourseEntities db)
+        News_PortalEntities _db;
+        public CommentRepo(News_PortalEntities db)
         {
             _db = db;
         }

@@ -27,7 +27,7 @@ namespace Project.Auth
                 filterContext.Result = new RedirectToRouteResult("Default",
                     new System.Web.Routing.RouteValueDictionary{
                         {"controller", "Auth/Login"},
-                        {"action", "Login"},
+                        {"action", "Logout"},
                         {"returnUrl", filterContext.HttpContext.Request.RawUrl}
                     });
             }

@@ -15,6 +15,5 @@ namespace BusinessEntityLayer
         public string Category { get; set; }
         public virtual UserModel User { get; set; }
         public virtual List<CommentModel> Comments { get; set; }
-        public virtual List<ReactModel> Reacts { get; set; }
     }
 }

@@ -1,0 +1,90 @@
+﻿@model IEnumerable<Project.Models.Entities.User>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a href="javascript: void(0);">SMS Gateway</a></li>
+
+                    <li class="breadcrumb-item active">User</li>
+                </ol>
+            </div>
+            <h4 class="page-title">@ViewBag.Title</h4>
+        </div>
+    </div>
+</div>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+
+                <div class="table-responsive">
+                    <table class="table table-centered table-striped dt-responsive nowrap w-100" id="products-datatable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Balance</th>
+                                <th>RegTime</th>
+                                <th>Role</th>
+                               
+
+
+                                <th style="width: 75px;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                            <tr>
+
+                                <td class="table-user">
+
+                                    @item.Id
+                                </td>
+                                <td>@item.Name</td>
+                                <td>@item.Email</td>
+                                <td>@item.Balance</td>
+                                <td>@item.RegTime</td>
+
+                                <td>
+                                    @if (@item.Role == 1)
+                                    {
+                                        <span class="badge badge-soft-success">Admin</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge badge-soft-warning">User</span>
+                                    }
+
+
+                                </td>
+
+
+                                <td>
+                                    <a href="/User/Edit/@item.Id" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                    <a href="/User/Delete/@item.Id" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                </td>
+                            </tr>
+
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div> <!-- end card-body-->
+        </div> <!-- end card-->
+    </div> <!-- end col -->
+</div>
+<!-- end row -->

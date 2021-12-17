@@ -44,7 +44,6 @@
     <Compile Include="CategoryModel.cs" />
     <Compile Include="CommentModel.cs" />
     <Compile Include="NewsModel.cs" />
-    <Compile Include="NewsUserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserModel.cs" />
   </ItemGroup>

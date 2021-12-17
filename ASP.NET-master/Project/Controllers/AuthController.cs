@@ -12,6 +12,7 @@ namespace Project.Controllers
     [AllowAnonymous]
     public class AuthController : Controller
     {
+        
         // GET: Login
         public ActionResult Login()
         {
@@ -41,7 +42,11 @@ namespace Project.Controllers
                     var authCookie = new HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket);
                     HttpContext.Response.Cookies.Add(authCookie);
                     Session.Add("userId", user.Id);
+                    Session.Add("Role", user.Role);
                     Session.Add("userName", user.Name);
+
+                    
+
                     return RedirectToAction("Index", "Home");
 
 
@@ -100,7 +105,10 @@ namespace Project.Controllers
                 var db = new ProjectEntities();
                 db.Users.Add(user);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                ViewBag.SuccessMessage = "Registration Successfull";
+                //return RedirectToAction("Home\Index");
+                return View(u);
+               
 
 
             }
@@ -113,6 +121,7 @@ namespace Project.Controllers
         {
             Session.Contents.RemoveAll();
             FormsAuthentication.SignOut();
+           
             return RedirectToAction("Login");
         }
 
